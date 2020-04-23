@@ -53,6 +53,7 @@ let
   }
   # Build the shell derivation in Hydra so that all its dependencies
   # are cached.
-  // mapTestOn (packagePlatforms { inherit (project) shell; });
+  // mapTestOn (packagePlatforms { inherit (project) shell; })
+  // { tests = pkgs.nixosTest ./tests/example.nix; };
 
 in jobs

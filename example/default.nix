@@ -4,7 +4,7 @@
 , config ? {}
 }@args: with import ./nix args; {
   shell = mkShell {
-    buildInputs = [ niv nixops nix ];
+    buildInputs = [ niv nixops nix libvirt ];
     NIX_PATH = "nixpkgs=${path}";
     NIXOPS_DEPLOYMENT = "${globals.deploymentName}";
     passthru = {
