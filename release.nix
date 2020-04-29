@@ -51,6 +51,7 @@ let
       ]
     );
   }
+  // { nixosTests = import ./nix/nixos/tests { inherit pkgs; }; }
   # Build the shell derivation in Hydra so that all its dependencies
   # are cached.
   // mapTestOn (packagePlatforms { inherit (project) shell; });
